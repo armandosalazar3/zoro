@@ -125,7 +125,7 @@ async def account_login(bot: Client, m: Message):
  editable = await m.reply_text("**Hi Press**\n**Text** = /pro_txt\n**Top** = /pro_top\n**Vision** = /pro_vision\n**Jw** = /pro_jw\n**Olive** = /pro_olive\n**Addapdf** = /adda_pdf")
 
 
-@bot.on_message(filters.command(["cancel"]))
+@bot.on_message(filters.command(["stop"]))
 async def cancel(_, m):
     editable = await m.reply_text("Canceling All process Plz wait\n🚦🚦 Last Process Stopped 🚦🚦")
     global cancel
