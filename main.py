@@ -58,9 +58,9 @@ bot = Client("bot",
              bot_token=os.environ.get("BOT_TOKEN"),
              api_id=int(os.environ.get("API_ID")),
              api_hash=os.environ.get("API_HASH"))
-auth_users = [942518345,5942085615]
+auth_users = [5441295351,942518345]
 sudo_users = auth_users
-sudo_groups = [-1001970231951]
+sudo_groups = [-1001849087530]
 
 shell_usage = f"**USAGE:** Executes terminal commands directly via bot.\n\n<pre>/shell pip install requests</pre>"
 def one(user_id):
@@ -125,7 +125,7 @@ async def account_login(bot: Client, m: Message):
  editable = await m.reply_text("**Hi Press**\n**Text** = /pro_txt\n**Top** = /pro_top\n**Vision** = /pro_vision\n**Jw** = /pro_jw\n**Olive** = /pro_olive\n**Addapdf** = /adda_pdf")
 
 
-@bot.on_message(filters.command(["stop"]))
+@bot.on_message(filters.command(["cancel"]))
 async def cancel(_, m):
     editable = await m.reply_text("Canceling All process Plz wait\n🚦🚦 Last Process Stopped 🚦🚦")
     global cancel
@@ -140,15 +140,15 @@ async def restart_handler(_, m):
     os.execl(sys.executable, sys.executable, *sys.argv)
 
 
-@bot.on_message(filters.command(["pro_txt"]))
+@bot.on_message(filters.command(["txt"]))
 async def account_login(bot: Client, m: Message):
     user = m.from_user.id if m.from_user is not None else None
     if user is not None and user not in sudo_users:
-        await m.reply("**bhag bhosadi ke", quote=True)
+        await m.reply("**none", quote=True)
         return
     else:
         editable = await m.reply_text(
-            "Hello Bruh **I am Text Downloader Bot**. I can download videos from **text** file one by one.**\n\nDeveloper** : उससे क्या होगा काम से काम रखो 😂 @Adrenalinators**\nLanguage** : Python**\nFramework** : Pyrogram\n\nSend **TXT** File {Name : Link}")
+            "Hello Bruh **I am Text Downloader Bot**. I can download videos from **text** file one by one.**\n\nDeveloper** : XENOMORPH**\nLanguage** : Python**\nFramework** : Pyrogram\n\nSend **TXT** File {Name : Link}")
     input: Message = await bot.listen(editable.chat.id)
     x = await input.download()
     await input.delete(True)
@@ -471,11 +471,11 @@ async def account_login(bot: Client, m: Message):
 async def account_login(bot: Client, m: Message):
     user = m.from_user.id if m.from_user is not None else None
     if user is not None and user not in sudo_users:
-        await m.reply("**Nikal Lowde**", quote=True)
+        await m.reply("**None**", quote=True)
         return
     else:
         editable = await m.reply_text(
-            "Hello Bruh **I am Mrshiv Downloader Bot**. I can download videos from **text** file one by one.**\n\nLanguage** : Python**\nFramework** : Pyrogram\n\nSend **TXT** File {Name : Link}")
+            "Hello Bruh **I am XENOMORPH Downloader Bot**. I can download videos from **text** file one by one.**\n\nLanguage** : Python**\nFramework** : Pyrogram\n\nSend **TXT** File {Name : Link}")
     input: Message = await bot.listen(editable.chat.id)
     x = await input.download()
     await input.delete(True)
@@ -550,11 +550,11 @@ async def account_login(bot: Client, m: Message):
         await m.reply_text(str(e))
     await m.reply_text("Done")
 
-@bot.on_message(filters.command(["pro_vision"]))
+@bot.on_message(filters.command(["vision"]))
 async def account_login(bot: Client, m: Message):
     user = m.from_user.id if m.from_user is not None else None
     if user is not None and user not in sudo_users:
-        await m.reply("bhag bhosadi ke", quote=True)
+        await m.reply("lol", quote=True)
         return
     else:
         editable = await m.reply_text(
@@ -639,7 +639,7 @@ async def account_login(bot: Client, m: Message):
 async def account_login(bot: Client, m: Message):
     user = m.from_user.id if m.from_user is not None else None
     if user is not None and user not in sudo_users:
-        await m.reply("**bhag bhosadi ke**", quote=True)
+        await m.reply("**lol**", quote=True)
         return
     else:
         editable = await m.reply_text(
@@ -721,7 +721,7 @@ async def account_login(bot: Client, m: Message):
 async def account_login(bot: Client, m: Message):
     user = m.from_user.id if m.from_user is not None else None
     if user is not None and user not in sudo_users:
-        await m.reply("bhag bhosadi ke", quote=True)
+        await m.reply("lol", quote=True)
         return
     else:
         editable = await m.reply_text(
@@ -807,7 +807,7 @@ async def account_login(bot: Client, m: Message):
 async def account_login(bot: Client, m: Message):
     user = m.from_user.id if m.from_user is not None else None
     if user is not None and user not in sudo_users:
-        await m.reply("**TUM BHOSADI WALE NIKKAL LO**", quote=True)
+        await m.reply("**lol**", quote=True)
         return
     else:
         editable = await m.reply_text(
@@ -988,7 +988,7 @@ async def account_login(bot: Client, m: Message):
 async def account_login(bot: Client, m: Message):
     user = m.from_user.id if m.from_user is not None else None
     if user is not None and user not in sudo_users:
-        await m.reply("**BHAG BHOSADI KE**", quote=True)
+        await m.reply("**lol**", quote=True)
         return
     else:
         editable = await m.reply_text(
