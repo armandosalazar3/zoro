@@ -506,19 +506,15 @@ async def account_login(bot: Client, m: Message):
                 #                         await m.reply_text(str(e))
                 #                         time.sleep(e.x)
                 #                         continue
-                if cmd == "pdf" or ".pdf" in url or ".pdf" in name:
+                if cmd == "pdf" or ".pdf" in url:
                     try:
                         ka = await helper.aio(url, name)
                         await prog.delete(True)
                         time.sleep(1)
-                        reply = await m.reply_text(f"Uploading - ```{name}```")
+                        reply = await m.reply_text(f"Uploading - ```{name}```\n\n**With ❤️ From GROUP ADMINS.**")
                         time.sleep(1)
                         start_time = time.time()
-                        await m.reply_document(
-                            ka,
-                            caption=
-                            f'**Title »** {name1} {res}.pdf\n**Caption »** {raw_text0}\n**Index »** {str(count).zfill(3)}'
-                        )
+                        await m.reply_document(ka, caption=f'{str(count).zfill(3)}. {name1} {res}.pdf\n\n**Batch:** {raw_text0}\n\n**Downloaded By:**Respected GROUP ADMINS❤️')
                         count += 1
                         # time.sleep(1)
                         await reply.delete(True)
