@@ -28,32 +28,11 @@ import re
 import os
 import io
 import logging
-#import pycurl
-
-# bot = Client(
-#     "bot",
-#     api_id=api_id,
-#     api_hash=api_hash,
-#     bot_token=bot_token)
-
-from logging.handlers import RotatingFileHandler
-
-logging.basicConfig(
-    level=logging.DEBUG,
-    format=
-    "%(asctime)s - %(levelname)s - %(message)s [%(filename)s:%(lineno)d]",
-    datefmt="%d-%b-%y %H:%M:%S",
-    handlers=[
-        RotatingFileHandler("Assist.txt", maxBytes=50000000, backupCount=10),
-        logging.StreamHandler(),
-    ],
-)
-logging.getLogger("pyrogram").setLevel(logging.WARNING)
-
-
-logging = logging.getLogger()
-
-
+API_ID = 9541960
+API_HASH = "17a1aa509b35564481dae98d89d0191d"
+BOT_TOKEN = "6610143533:AAFvYZMQtcJeFenFlOAVTRP1pMo8F_f47HI"
+AUTH_USERS = 942518345
+sudo_users = [-1001912090653]
 bot = Client(
     "bot",
     bot_token=BOT_TOKEN,
