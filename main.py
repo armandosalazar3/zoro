@@ -148,7 +148,7 @@ async def account_login(bot: Client, m: Message):
       await exec(command_to_exec)
       prog = await m.reply_text(Show)
       if ".pdf" in url:
-          cc2 = f'{str(count).zfill(2)}. {name}\n\n**Batch »** {mm}\n**Dowloaded By »** {raw_text0}'
+          cc2 = f'{str(count).zfill(2)}. {name}\n\n**Batch:** {mm}\n\n**Dowloaded By:** {raw_text0}'
           await bot.send_document(document = name+".pdf",caption=cc2)
           os.remove(f"{name}")
           count+=1
@@ -162,7 +162,7 @@ async def account_login(bot: Client, m: Message):
         continue
       else:
         start_time = time.time()
-        cc = f'{str(count).zfill(2)}. {name} - {vid_format}p\n\n**Batch »** {mm}\n**Dowloaded By »** {raw_text0}'
+        cc = f'{str(count).zfill(2)}. {name} - {vid_format}p\n\n**Batch:** {mm}\n\n**Dowloaded By:** {raw_text0}'
         try:
           duration, width, height = get_video_attributes(path)
         except:
@@ -655,7 +655,7 @@ async def account_login(bot: Client, m: Message):
             name = f'{str(count).zfill(3)}) {name1}'
             Show = f"**Downloading:-**\n\n**Name :-** `{name}`\n\n**Url :-** `{url1}`"
             prog = await m.reply_text(Show)
-            cc = f'**Title >>** {name1}.mkv\n**Batch >>** {raw_text0}\n**Index >>** {str(count).zfill(3)}'
+            cc = f'**Title >>** {name1}.mkv\n**Batch:** {raw_text0}\n\n**Index >>** {str(count).zfill(3)}'
             if "pdf" in url:
                 cmd = f'yt-dlp -o "{name}.pdf" "{url1}"'
             else:
@@ -770,7 +770,7 @@ async def account_login(bot: Client, m: Message):
             name = f'{str(count).zfill(3)}) {name1}'
             Show = f"**Downloading:-**\n\n**Name :-** `{name}`\n\n**Url :-** `{url}`\n\n`"
             prog = await m.reply_text(Show)
-            cc = f'**Name »** {name1}.mp4\n**Batch »** {raw_text5}\n**Index »** {str(count).zfill(3)}'
+            cc = f'**Name »** {name1}.mp4\n**Batch:** {raw_text5}\n\n**Index:** {str(count).zfill(3)}'
             if "youtu" or "vision" in url:
                 cmd = f'yt-dlp "{url}" -o "{name}"'
             elif "player.vimeo" in url:
