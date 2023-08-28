@@ -88,9 +88,6 @@ async def account_login(bot: Client, m: Message):
     editable = await editable.edit("**Enter Batch Name**")
     input01: Message = await bot.listen(editable.chat.id)
     mm = input01.text    
-    editable = await editable.edit("**Downloaded By**")
-    input0: Message = await bot.listen(editable.chat.id)
-    raw_text0 = input0.text
     
     await editable.edit("**Enter resolution**")
     input2: Message = await bot.listen(editable.chat.id)
@@ -148,7 +145,7 @@ async def account_login(bot: Client, m: Message):
       await exec(command_to_exec)
       prog = await m.reply_text(Show)
       if ".pdf" in url:
-          cc2 = f'{str(count).zfill(2)}. {name}\n\n**Batch:** {mm}\n\n**Dowloaded By:** {raw_text0}'
+          cc2 = f'{str(count).zfill(2)}. {name}\n\n**Batch:** {mm}\n\n**Dowloaded By:XENOMORPH** {raw_text0}'
           await bot.send_document(document = name+".pdf",caption=cc2)
           os.remove(f"{name}")
           count+=1
@@ -162,7 +159,7 @@ async def account_login(bot: Client, m: Message):
         continue
       else:
         start_time = time.time()
-        cc = f'{str(count).zfill(2)}. {name} - {vid_format}p\n\n**Batch:** {mm}\n\n**Dowloaded By:** {raw_text0}'
+        cc = f'{str(count).zfill(2)}. {name} - {vid_format}p\n\n**Batch:** {mm}\n\n**Dowloaded By:XENOMORPH** {raw_text0}'
         try:
           duration, width, height = get_video_attributes(path)
         except:
@@ -484,8 +481,8 @@ async def account_login(bot: Client, m: Message):
             try:
                 Show = f"**Downloading:-**\n\n**Name :-** `{name}\nQuality - {raw_text2}`\n\n**Url :-** `{url}`"
                 prog = await m.reply_text(Show)
-                cc = f'{str(count).zfill(3)}**.** {name1} {res}\n**Batch :-** {raw_text0}'
-                cc1 = f'{str(count).zfill(3)}**.** {name1} {res}.pdf\n**Batch :-** {raw_text0}'
+                cc = f'{str(count).zfill(3)}.  {name1} {res}.mkv\n\n**Batch:** {raw_text0}\n\n**Downloaded By:** XENOMORPH❤️'
+                cc1 = f'{str(count).zfill(3)}. {name1} {res}.pdf\n\n**Batch:** {raw_text0}\n\n**Downloaded By:**XENOMORPH❤️'
                 #                         await prog.delete (True)
                 #                 if cmd == "pdf" or "drive" in url:
                 #                     try:
@@ -511,7 +508,7 @@ async def account_login(bot: Client, m: Message):
                         ka = await helper.aio(url, name)
                         await prog.delete(True)
                         time.sleep(1)
-                        reply = await m.reply_text(f"Uploading - ```{name}```\n\n**With ❤️ From GROUP ADMINS.**")
+                        reply = await m.reply_text(f"Uploading - ```{name}```\n\n**With ❤️ From XENOMORPH.**")
                         time.sleep(1)
                         start_time = time.time()
                         await m.reply_document(ka, caption=f'{str(count).zfill(3)}. {name1} {res}.pdf\n\n**Batch:** {raw_text0}\n\n**Downloaded By:**Respected GROUP ADMINS❤️')
@@ -655,7 +652,7 @@ async def account_login(bot: Client, m: Message):
             name = f'{str(count).zfill(3)}) {name1}'
             Show = f"**Downloading:-**\n\n**Name :-** `{name}`\n\n**Url :-** `{url1}`"
             prog = await m.reply_text(Show)
-            cc = f'**Title >>** {name1}.mkv\n**Batch:** {raw_text0}\n\n**Index >>** {str(count).zfill(3)}'
+            cc = f'**Title:** {name1}.mkv\n\n**Batch:** {raw_text0}\n\n**Index:** {str(count).zfill(3)}'
             if "pdf" in url:
                 cmd = f'yt-dlp -o "{name}.pdf" "{url1}"'
             else:
